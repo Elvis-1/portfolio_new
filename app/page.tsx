@@ -1,4 +1,6 @@
 import { about, hero } from '../data/siteContent';
+import { experiences } from '../data/experience';
+import { projects } from '../data/projects';
 
 export default function Home() {
   return (
@@ -56,6 +58,61 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="experience" className="mt-24 space-y-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.32em] text-accent">Experience</p>
+            <h2 className="mt-4 text-3xl font-semibold text-primary">Work history</h2>
+          </div>
+          <div className="space-y-6">
+            {experiences.map((item) => (
+              <article key={`${item.company}-${item.period}`} className="rounded-3xl border border-border bg-card p-8 shadow-sm shadow-border/30">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold text-primary">{item.title}</h3>
+                    <p className="mt-1 text-sm uppercase tracking-[0.24em] text-muted">{item.company} • {item.location}</p>
+                  </div>
+                  <p className="text-sm font-medium text-accent">{item.period}</p>
+                </div>
+                <p className="mt-6 text-base leading-7 text-muted">{item.description}</p>
+                <ul className="mt-6 space-y-3 list-disc pl-5 text-base leading-7 text-muted">
+                  {item.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects" className="mt-24 space-y-8">
+          <div>
+            <p className="text-sm uppercase tracking-[0.32em] text-accent">Projects</p>
+            <h2 className="mt-4 text-3xl font-semibold text-primary">Featured work</h2>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {projects.map((project) => (
+              <article key={project.name} className="rounded-3xl border border-border bg-card p-8 shadow-sm shadow-border/30">
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="text-xl font-semibold text-primary">{project.name}</h3>
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noreferrer" className="text-sm font-semibold text-accent hover:underline">
+                      View
+                    </a>
+                  ) : null}
+                </div>
+                <p className="mt-4 text-base leading-7 text-muted">{project.summary}</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {project.details.map((detail) => (
+                    <span key={detail} className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
+                      {detail}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </div>

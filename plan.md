@@ -9,14 +9,14 @@ Create a modern Next.js portfolio website that mirrors the Figma template struct
 - Resume content will be distilled into concise web-friendly sections.
 
 ## Color Palette
-- Primary: `#0D1F2E` — deep navy for backgrounds and typography.
-- Accent: `#3B82F6` — bright blue for buttons, links, and highlights.
-- Surface: `#F8FAFC` — off-white page background.
-- Card: `#FFFFFF` — crisp white surfaces for cards and panels.
-- Border: `#E2E8F0` — soft gray borders and separators.
-- Muted: `#64748B` — medium gray for secondary text.
+- Primary: `#0B1D3A` — deep navy for strong headings and body text.
+- Accent: `#4F7DFF` — bright blue for buttons, links, and highlights.
+- Surface: `#09111F` — dark page background for a modern portfolio feel.
+- Card: `#112740` — rich blue surface for content cards.
+- Border: `#2C4B7D` — subtle blue border for section separation.
+- Muted: `#A0B4D3` — light blue-gray for secondary text.
 
-> Note: direct Figma access was blocked by CloudFront/WebGL restrictions, so the palette is inferred from the template's modern portfolio style and applied consistently in Part 1.
+> Note: colors are being applied consistently in Part 1 using the reference-style palette.
 
 ## Tech Stack
 - Next.js (latest stable version)
@@ -139,6 +139,7 @@ Success criteria:
 
 ## Progress
 - Part 1 (Setup and Core Branding) is complete: Next.js scaffold created, dependencies installed, Hero and About sections implemented, and the project builds successfully.
+- Part 2 (Experience and Projects) is complete: data-driven sections built, project cards rendered, and the app still builds and lints successfully.
 
 ## Deliverable
 A single-page portfolio in Next.js with modern styling and your resume-driven content, arranged into the sections above.

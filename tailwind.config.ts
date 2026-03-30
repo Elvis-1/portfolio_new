@@ -5,12 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#0D1F2E',
-        accent: '#3B82F6',
-        surface: '#F8FAFC',
-        card: '#FFFFFF',
-        border: '#E2E8F0',
-        muted: '#64748B',
+        primary: '#EAF2FF',
+        accent: '#4F7DFF',
+        surface: '#09111F',
+        card: '#112740',
+        border: '#2C4B7D',
+        muted: '#A0B4D3',
       },
     },
   },
