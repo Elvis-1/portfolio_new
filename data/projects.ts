@@ -18,7 +18,7 @@ export const projects: ProjectItem[] = [
     details: ['Beneficiary management', 'Account verification', 'Multiple transfer channels', 'Smooth payment flows'],
     storeLinks: [
       { label: 'Play Store', href: 'https://play.google.com/store/search?q=Vulte' },
-      { label: 'App Store', href: 'https://apps.apple.com/us/search?term=Vulte' },
+      { label: 'App Store', href: 'https://apps.apple.com/us/app/vulte/id1541640258?uo=4' },
     ],
   },
   {
@@ -36,7 +36,7 @@ export const projects: ProjectItem[] = [
     details: ['App store deployment', 'Stripe payment upgrade', 'Profile and ad features'],
     storeLinks: [
       { label: 'Play Store', href: 'https://play.google.com/store/search?q=African+Proverbs' },
-      { label: 'App Store', href: 'https://apps.apple.com/us/search?term=African%20Proverbs' },
+      { label: 'App Store', href: 'https://apps.apple.com/us/app/african-proverbs/id1516529570?uo=4' },
     ],
   },
   {
