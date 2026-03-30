@@ -1,6 +1,9 @@
 import { about, hero } from '../data/siteContent';
+import { contact } from '../data/contact';
+import { education, certifications } from '../data/education';
 import { experiences } from '../data/experience';
 import { projects } from '../data/projects';
+import { skills } from '../data/skills';
 
 export default function Home() {
   return (
@@ -128,6 +131,102 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="skills" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+          <div>
+            <p className="text-sm uppercase tracking-[0.32em] text-accent">Skills</p>
+            <h2 className="mt-4 text-3xl font-semibold text-primary">Technical and collaboration strengths</h2>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {skills.map((group) => (
+              <div key={group.category} className="rounded-3xl border border-border bg-surface p-8 text-primary/85">
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">{group.category}</p>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {group.items.map((item) => (
+                    <span key={item} className="rounded-2xl border border-border bg-card px-4 py-2 text-sm text-muted">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="education" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+          <div>
+            <p className="text-sm uppercase tracking-[0.32em] text-accent">Education</p>
+            <h2 className="mt-4 text-3xl font-semibold text-primary">Training and academic background</h2>
+          </div>
+          <div className="mt-10 space-y-6">
+            {education.map((record) => (
+              <article key={record.title} className="rounded-3xl border border-border bg-surface p-8 text-primary/85">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-semibold text-primary">{record.title}</h3>
+                    <p className="mt-1 text-sm uppercase tracking-[0.24em] text-muted">
+                      {record.institution} • {record.location}
+                    </p>
+                  </div>
+                  <p className="text-sm font-medium text-accent">{record.period}</p>
+                </div>
+                {record.details ? (
+                  <ul className="mt-6 space-y-3 list-disc pl-5 text-base leading-7 text-muted">
+                    {record.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </article>
+            ))}
+            <article className="rounded-3xl border border-border bg-surface p-8 text-primary/85">
+              <p className="text-sm uppercase tracking-[0.28em] text-muted">Certifications & training</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {certifications.map((item) => (
+                  <span key={item} className="rounded-2xl border border-border bg-card px-4 py-2 text-sm text-muted">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.32em] text-accent">Contact</p>
+              <h2 className="mt-4 text-3xl font-semibold text-primary">{contact.heading}</h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-muted">{contact.message}</p>
+            </div>
+            <div className="space-y-4 rounded-3xl bg-surface p-8 text-primary/85">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">Email</p>
+                <a href={`mailto:${contact.email}`} className="mt-2 block text-base text-accent hover:underline">
+                  {contact.email}
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">Phone</p>
+                <a href={`tel:${contact.phone}`} className="mt-2 block text-base text-accent hover:underline">
+                  {contact.phone}
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">LinkedIn</p>
+                <a href={contact.linkedin} target="_blank" rel="noreferrer" className="mt-2 block text-base text-accent hover:underline">
+                  {contact.linkedin}
+                </a>
+              </div>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">GitHub</p>
+                <a href={contact.github} target="_blank" rel="noreferrer" className="mt-2 block text-base text-accent hover:underline">
+                  {contact.github}
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </div>
