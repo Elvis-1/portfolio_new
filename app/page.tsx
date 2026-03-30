@@ -216,6 +216,22 @@ export default function Home() {
               <p className="mt-6 max-w-2xl text-base leading-8 text-muted">{contact.message}</p>
             </div>
             <div className="space-y-4 rounded-3xl bg-surface p-8 text-primary/85">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <a
+                  href={`mailto:${contact.email}?subject=Project%20Inquiry&body=Hi%20Elvis%2C%0A%0AI%27d%20like%20to%20talk%20about%20a%20project%20opportunity.%0A%0AProject%20details%3A%0A`}
+                  className="inline-flex min-w-[10rem] items-center justify-center rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent/90"
+                >
+                  Email me
+                </a>
+                <a
+                  href={contact.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-w-[10rem] items-center justify-center rounded-full border border-border bg-surface px-5 py-3 text-sm font-semibold text-accent transition hover:border-accent/80 hover:bg-surface/90"
+                >
+                  WhatsApp chat
+                </a>
+              </div>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-muted">Email</p>
                 <a href={`mailto:${contact.email}`} className="mt-2 block text-base text-accent hover:underline">

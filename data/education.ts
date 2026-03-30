@@ -12,7 +12,7 @@ export const education: EducationRecord[] = [
     institution: 'University of Benin',
     location: 'Benin City, Nigeria',
     period: '2013 — 2018',
-    details: ['Electrical/Electronics Engineering', 'Strong foundation in problem solving and systems design'],
+    details: ['Mechanical Engineering', 'Strong foundation in problem solving and systems design'],
   },
   {
     title: 'Senior School Certificate',

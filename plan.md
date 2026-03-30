@@ -64,6 +64,7 @@ Create a modern Next.js portfolio website that mirrors the Figma template struct
 7. `Contact` section
    - Email: `igieborelvis@gmail.com`
    - Phone: `+234 8061464092`
+   - WhatsApp chat link for instant messaging
    - Social links: LinkedIn, GitHub
    - Optional contact form
 
@@ -120,10 +121,10 @@ Success criteria:
 
 Success criteria:
 - Skills, Education and Contact sections appear complete and clearly organized.
-- Contact links are functional.
+- Contact links are functional and include quick chat/email options.
 - Optional contact form validates input and displays success/failure states if included.
 
-> Status: Part 3 complete. Skills, Education, and Contact sections are implemented and rendered from structured data.
+> Status: Part 3 complete. Skills, Education, and Contact sections are implemented and rendered from structured data, including a WhatsApp chat option and email CTA.
 
 ### Part 4 — Polish and Final Review
 - Add polished animations and refined spacing for a finished feel.
