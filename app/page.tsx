@@ -8,8 +8,22 @@ import { skills } from '../data/skills';
 export default function Home() {
   return (
     <main className="min-h-screen bg-surface text-primary">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
-        <section className="space-y-8 pt-8">
+      <header className="sticky top-0 z-30 border-b border-border bg-surface/95 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 text-sm text-muted md:flex-row md:items-center md:justify-between md:px-10">
+          <a href="#top" className="font-semibold text-white transition hover:text-accent">
+            Elvis Igiebor
+          </a>
+          <nav className="flex flex-wrap items-center gap-4">
+            <a href="#about" className="transition hover:text-accent">About</a>
+            <a href="#experience" className="transition hover:text-accent">Experience</a>
+            <a href="#projects" className="transition hover:text-accent">Projects</a>
+            <a href="#skills" className="transition hover:text-accent">Skills</a>
+            <a href="#contact" className="transition hover:text-accent">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <div className="mx-auto max-w-6xl px-6 py-16 md:px-10" id="top">
+        <section className="animate-fade-in space-y-8 pt-8">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Hello, I&apos;m Elvis</p>
             <h1 className="mt-4 text-5xl font-semibold leading-tight sm:text-6xl">{hero.name}</h1>
@@ -26,7 +40,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+        <section id="about" className="animate-fade-in mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm uppercase tracking-[0.32em] text-accent">About Me</p>
@@ -64,7 +78,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="experience" className="mt-24 space-y-8">
+        <section id="experience" className="animate-fade-in mt-24 space-y-8">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Experience</p>
             <h2 className="mt-4 text-3xl font-semibold text-primary">Work history</h2>
@@ -90,7 +104,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="mt-24 space-y-8">
+        <section id="projects" className="animate-fade-in mt-24 space-y-8">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Projects</p>
             <h2 className="mt-4 text-3xl font-semibold text-primary">Featured work</h2>
@@ -134,7 +148,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="skills" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+        <section id="skills" className="animate-fade-in mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Skills</p>
             <h2 className="mt-4 text-3xl font-semibold text-primary">Technical and collaboration strengths</h2>
@@ -155,7 +169,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="education" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+        <section id="education" className="animate-fade-in mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Education</p>
             <h2 className="mt-4 text-3xl font-semibold text-primary">Training and academic background</h2>
@@ -194,7 +208,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
+        <section id="contact" className="animate-fade-in mt-24 rounded-3xl border border-border bg-card p-10 shadow-sm shadow-border/40">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.32em] text-accent">Contact</p>
@@ -229,6 +243,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <footer className="mt-24 border-t border-border py-10 text-center text-sm text-muted">
+          <p>Built using Next.js and Tailwind CSS • © {new Date().getFullYear()} Elvis Igiebor</p>
+        </footer>
       </div>
     </main>
   );
