@@ -50,7 +50,7 @@ Create a modern Next.js portfolio website that mirrors the Figma template struct
 4. `Projects` section
    - Featured apps with short descriptions
    - Example items: African Proverbs, Vulte, MoneySwap, Reachme Socials, Mr. Empowerment, Bell Global Express, LearnIt, Hostengines
-   - Add links to GitHub or app store if available
+   - Add links to Google Play and Apple App Store listings for published apps
 
 5. `Skills` section
    - Technical skills: Dart, Flutter, mobile UI/UX, REST APIs, Git, Agile, SDLC, problem-solving
@@ -109,6 +109,7 @@ Success criteria:
 
 Success criteria:
 - Experience and Projects sections render from structured data.
+- Live app project cards include direct Play Store and App Store links where available.
 - Section styles match the portfolio template look/feel.
 - Information is easy to scan and mobile-friendly.
 

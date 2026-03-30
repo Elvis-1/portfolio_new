@@ -104,6 +104,21 @@ export default function Home() {
                   ) : null}
                 </div>
                 <p className="mt-4 text-base leading-7 text-muted">{project.summary}</p>
+                {project.storeLinks ? (
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {project.storeLinks.map((storeLink) => (
+                      <a
+                        key={storeLink.href}
+                        href={storeLink.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-accent transition hover:border-accent/80 hover:bg-surface/90"
+                      >
+                        {storeLink.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
                 <div className="mt-6 flex flex-wrap gap-3">
                   {project.details.map((detail) => (
                     <span key={detail} className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
