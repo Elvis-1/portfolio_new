@@ -149,3 +149,61 @@ Success criteria:
 
 ## Deliverable
 A single-page portfolio in Next.js with modern styling and your resume-driven content, arranged into the sections above.
+
+## Phasal Plan
+A concise, phase-by-phase implementation plan with goals, tasks, deliverables, and rough timelines. Each phase ends with clear acceptance criteria.
+
+### Phase 0 — Content Audit (0.5 day)
+- Goal: Collect and normalize existing content and assets.
+- Tasks: Review `app/page.tsx` and all files under `data/` (`siteContent.ts`, `projects.ts`, `experience.ts`, `skills.ts`, `contact.ts`, `education.ts`). Identify missing screenshots, links, and metrics.
+- Deliverable: Content inventory (CSV/MD list) mapping each page section to source files and missing items.
+- Acceptance: Inventory completed and reviewed.
+
+### Phase 1 — Brand & Hero Rewrite (0.5–1 day)
+- Goal: Reposition headline from "Flutter Engineer" to "Software Engineer • CTO — IFNOTGOD TECH LTD" and craft a concise hero summary emphasizing mobile, web, and AI-driven delivery.
+- Tasks: Draft 3 hero variants; choose one; update `data/siteContent.ts` and `app/page.tsx` copy.
+- Deliverable: New hero copy and short summary placed in `data/siteContent.ts`.
+- Acceptance: Updated hero renders correctly and passes copy review.
+
+### Phase 2 — Experience & Project Case Studies (1–2 days)
+- Goal: Expand projects and experience into concise case studies (mobile vs web) with metrics and links.
+- Tasks: For each selected project, add: role, platforms, tech stack, AI tooling used, timeline, outcome/metrics, and links. Separate into "Selected Mobile Projects" and "Selected Web Projects" in `data/projects.ts`.
+- Deliverable: 3–6 enhanced case studies and updated project cards/components.
+- Acceptance: Case studies render from data, include at least one screenshot/link, and show measurable outcomes.
+
+### Phase 3 — CTO & Leadership Section (0.5–1 day)
+- Goal: Add a dedicated section for IFNOTGOD TECH LTD describing responsibilities, team impact, and leadership highlights.
+- Tasks: Draft company summary, leadership bullets, hiring/mentoring highlights, and product outcomes. Add to `data/siteContent.ts` or `data/experience.ts` as appropriate.
+- Deliverable: New CTO/Leadership section added to the site with short bullets and optional links to company products.
+- Acceptance: Section is discoverable from the hero and displays responsibilities and 2–3 impact metrics.
+
+### Phase 4 — Skills, AI Tooling & Workflow (0.5 day)
+- Goal: Reorganize `data/skills.ts` to surface Mobile, Web, Backend, DevOps, and AI/tooling categories; emphasize AI-enabled delivery workflows.
+- Tasks: Create grouped lists, call out LLMs, prompt engineering, automation scripts, and CI techniques used to accelerate delivery.
+- Deliverable: Updated `data/skills.ts` and UI grouping on the Skills section.
+- Acceptance: Skills show grouped categories and a short blurb about AI-assisted development.
+
+### Phase 5 — Visuals & Assets (1 day)
+- Goal: Gather and add screenshots, short GIFs, architecture diagrams, and repo/demo links for each case study.
+- Tasks: Create an `assets/case-studies/` list and reference files from `data/projects.ts`; add lightbox or carousel UI considerations.
+- Deliverable: Asset manifest and updated project cards referencing assets.
+- Acceptance: At least one visual per featured project and working lightbox/carousel on project pages.
+
+### Phase 6 — QA, Polish & PR (0.5–1 day)
+- Goal: Final proofreading, responsive checks, accessibility fixes, and prepare a single PR with documented changes.
+- Tasks: Run linting, manual mobile checks, accessibility audits (aria, color contrast), and finalize copy.
+- Deliverable: Pull request with changes, CHANGELOG notes, and instructions for deployment.
+- Acceptance: PR passes local build, lint, and basic accessibility checks; content owner approves copy.
+
+### Optional Phase 7 — Case Study Deep Dives & SEO (1–2 days)
+- Goal: Create dedicated pages for 2–3 flagship projects with deeper technical write-ups, architecture diagrams, and SEO optimization.
+- Tasks: Create routes/pages, canonical metadata, structured data (JSON-LD), and longer-form writeups.
+- Deliverable: 2–3 project pages and improved SEO metadata.
+- Acceptance: Pages accessible from main site and indexable by search engines.
+
+## Timeline Summary
+- Minimum viable content update (Phases 0–4): 3–4 working days.
+- Full polish with visuals and PR (Phases 5–6): 1–2 additional days.
+- Deep case studies and SEO (Phase 7): optional 1–2 days.
+
+If you confirm, I'll run the content audit (Phase 0) and create the content inventory next.

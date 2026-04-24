@@ -109,42 +109,72 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.32em] text-accent">Projects</p>
             <h2 className="mt-4 text-3xl font-semibold text-primary">Featured work</h2>
           </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {projects.map((project) => (
-              <article key={project.name} className="rounded-3xl border border-border bg-card p-8 shadow-sm shadow-border/30">
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-xl font-semibold text-primary">{project.name}</h3>
-                  {project.link ? (
-                    <a href={project.link} target="_blank" rel="noreferrer" className="text-sm font-semibold text-accent hover:underline">
-                      View
-                    </a>
-                  ) : null}
-                </div>
-                <p className="mt-4 text-base leading-7 text-muted">{project.summary}</p>
-                {project.storeLinks ? (
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    {project.storeLinks.map((storeLink) => (
-                      <a
-                        key={storeLink.href}
-                        href={storeLink.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-accent transition hover:border-accent/80 hover:bg-surface/90"
-                      >
-                        {storeLink.label}
+
+          <div>
+            <h3 className="mt-8 text-2xl font-semibold text-primary">Mobile Projects</h3>
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              {projects.filter(p => p.category === 'mobile').map((project) => (
+                <article key={project.name} className="rounded-3xl border border-border bg-card p-8 shadow-sm shadow-border/30">
+                  <div className="flex items-center justify-between gap-4">
+                    <h4 className="text-xl font-semibold text-primary">{project.name}</h4>
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noreferrer" className="text-sm font-semibold text-accent hover:underline">
+                        View
                       </a>
+                    ) : null}
+                  </div>
+                  <p className="mt-4 text-base leading-7 text-muted">{project.summary}</p>
+                  {project.storeLinks ? (
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      {project.storeLinks.map((storeLink) => (
+                        <a
+                          key={storeLink.href}
+                          href={storeLink.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center justify-center rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-accent transition hover:border-accent/80 hover:bg-surface/90"
+                        >
+                          {storeLink.label}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {project.details.map((detail) => (
+                      <span key={detail} className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
+                        {detail}
+                      </span>
                     ))}
                   </div>
-                ) : null}
-                <div className="mt-6 flex flex-wrap gap-3">
-                  {project.details.map((detail) => (
-                    <span key={detail} className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
-                      {detail}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mt-12 text-2xl font-semibold text-primary">Web Projects & Platforms</h3>
+            <div className="mt-6 grid gap-6 lg:grid-cols-2">
+              {projects.filter(p => p.category === 'web').map((project) => (
+                <article key={project.name} className="rounded-3xl border border-border bg-card p-8 shadow-sm shadow-border/30">
+                  <div className="flex items-center justify-between gap-4">
+                    <h4 className="text-xl font-semibold text-primary">{project.name}</h4>
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noreferrer" className="text-sm font-semibold text-accent hover:underline">
+                        View
+                      </a>
+                    ) : null}
+                  </div>
+                  <p className="mt-4 text-base leading-7 text-muted">{project.summary}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {project.details.map((detail) => (
+                      <span key={detail} className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
+                        {detail}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

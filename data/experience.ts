@@ -9,6 +9,18 @@ export type ExperienceItem = {
 
 export const experiences: ExperienceItem[] = [
   {
+    title: 'CTO & Co-founder',
+    company: 'IFNOTGOD TECH LTD',
+    location: 'Remote / Lagos, Nigeria',
+    period: '2022 — Present',
+    description: 'Founded and lead engineering at IFNOTGOD TECH LTD, overseeing product strategy, engineering delivery, and AI-enabled development workflows across mobile and web products.',
+    highlights: [
+      'Lead product and technical strategy for mobile and web platforms.',
+      'Built and maintained core platforms including Sohenation and TravelMate partner portals.',
+      'Introduced AI-assisted development workflows to accelerate delivery and improve content/UX iteration.',
+    ],
+  },
+  {
     title: 'Flutter Developer (Contract)',
     company: 'Polaris Digital Bank',
     location: 'Lagos, Nigeria',
