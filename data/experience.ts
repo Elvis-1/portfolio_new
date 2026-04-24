@@ -13,11 +13,14 @@ export const experiences: ExperienceItem[] = [
     company: 'IFNOTGOD TECH LTD',
     location: 'Remote / Lagos, Nigeria',
     period: '2022 — Present',
-    description: 'Founded and lead engineering at IFNOTGOD TECH LTD, overseeing product strategy, engineering delivery, and AI-enabled development workflows across mobile and web products.',
+    description:
+      'Founded and lead engineering at IFNOTGOD TECH LTD. I own product and technical strategy, run the engineering org, and drive delivery across mobile and web products using AI-enabled workflows to accelerate iteration and improve product outcomes.',
     highlights: [
-      'Lead product and technical strategy for mobile and web platforms.',
-      'Built and maintained core platforms including Sohenation and TravelMate partner portals.',
-      'Introduced AI-assisted development workflows to accelerate delivery and improve content/UX iteration.',
+      'Lead product and technical strategy for mobile and web platforms (Sohenation, TravelMate).',
+      'Built and maintained core platforms and partner portals; responsible for roadmap, architecture, and hiring.',
+      'Established AI-assisted workflows for recommendations, content generation, and search tuning to speed up product iteration (metrics to add).',
+      'Implemented CI/CD, monitoring, and release processes to improve reliability and deployment cadence.',
+      'Mentored engineers and grew the team; instituted engineering best practices and documentation standards.',
     ],
   },
   {

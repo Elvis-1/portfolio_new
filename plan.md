@@ -189,6 +189,8 @@ A concise, phase-by-phase implementation plan with goals, tasks, deliverables, a
 - Deliverable: Asset manifest and updated project cards referencing assets.
 - Acceptance: At least one visual per featured project and working lightbox/carousel on project pages.
 
+Status: case-study template and an assets manifest were added (see `docs/case-study-template.md` and `data/assets.ts`). Add real images to `public/assets/case-studies/` and update `data/assets.ts` with filenames.
+
 ### Phase 6 — QA, Polish & PR (0.5–1 day)
 - Goal: Final proofreading, responsive checks, accessibility fixes, and prepare a single PR with documented changes.
 - Tasks: Run linting, manual mobile checks, accessibility audits (aria, color contrast), and finalize copy.
